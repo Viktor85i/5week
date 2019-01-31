@@ -4,26 +4,26 @@
 	<meta charset="UTF-8">
 	<title>5 week</title>
 	<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+	<style>
+		body {
+			background: #d7f8f4;
+		}
+		.flex {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			margin-top: 10%;
+		}
+		.flex div {
+			width: 25%;
+			height: 25%;
+			margin: 1%;
+			padding: 1%;
+			border: 3px solid #6381eb; 
+		}
+	</style>
 </head>
-<style>
-	body {
-		background: #d7f8f4;
-	}
-	.flex {
-		display: flex;
-		justify-content: space-around;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		margin-top: 10%;
-	}
-	.flex div {
-		width: 25%;
-		height: 25%;
-		margin: 1%;
-		padding: 1%;
-		border: 3px solid #6381eb; 
-	}
-</style>
 <body>
 	<div class="flex">
 		<div class="first">
@@ -63,10 +63,10 @@
 				var nDate = new Date();
 				var min = nDate.getMinutes();
 				var sec = nDate.getSeconds();
-				if (min<10) {
+				if (min < 10) {
 					min = "0" + min; 
 				}
-				if (sec<10) {
+				if (sec < 10) {
 					sec = "0" + sec; 
 				}
 				document.write(nDate.getHours() + ":" + min + ":" + sec +"<br>");
@@ -144,11 +144,13 @@
 				document.write("Задание №8" + "<br>");
 				var str = prompt("Задание №8: Введите любое слово!!!", "");
 				function getStringLength(string) {
-					if (string.length>10) {
+					if (string.length > 10) {
 						return "В строке больше 10 символов, а именно " + string.length + "<br>";
-					} else if (string.length==10) {
+					} else if (string.length == 10) {
 						return "В строке " + string.length + " символов" + "<br>";
-					} else {
+					} else if (string.length == "") {
+						return "В строке нет символов" + "<br>";
+					}else {
 						return "В строке меньше 10 символов, а именно " + string.length + "<br>";
 					}
 				}
@@ -174,9 +176,9 @@
 				//////////////////////////////////////////
 				// 2 Способ
 				function getSum2() {
-					var sum=0;
-			        for (var i=0; i<arguments.length; i++) {
-			                sum +=arguments[i];		
+					var sum = 0;
+			        for (var i = 0; i < arguments.length; i++) {
+			                sum += arguments[i];		
 					} 
 					return sum;
 				}
@@ -187,8 +189,8 @@
 			<script>
 				//Задание 10
 				document.write("Задание №10 " + "Вывод на экран с помощью 'Alert'" );
-				var i=0;
-				while (i<3) {
+				var i = 0;
+				while (i < 3) {
 					alert( "Задание №10: номер " + i + "!" );
 					i++;
 				}
